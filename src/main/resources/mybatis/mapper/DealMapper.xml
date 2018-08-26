@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.steven.mall.mapper.DealMapper">
+    <resultMap id="BaseResultMap" type="com.steven.mall.domain.Deal">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="deal_title" property="dealTitle" jdbcType="VARCHAR"/>
+        <result column="sku_id" property="skuId" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+
+    <select id="getAllDeals" resultMap="BaseResultMap">
+        SELECT *
+        FROM deal
+    </select>
+
+</mapper>
